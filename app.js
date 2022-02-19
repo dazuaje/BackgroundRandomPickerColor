@@ -4,29 +4,28 @@ const text = document.querySelector('.textRGB');
 const backgroundcolor = document.querySelector('.backgroundAllPage');
 
 btn.addEventListener('click', (e) => {
-    backgroundcolor.style.backgroundColor = changeColor();
-    text.textContent = changeColor(); 
+    const red = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+
+    const fullColor =  `RGB( ${red},${green},${blue})`
+
+    backgroundcolor.style.backgroundColor = fullColor;
+    text.textContent = fullColor;
+    text.style.backgroundColor = fullColor
     
     
 });
 
-//Ramdom number
-const RGB = () => {return Math.floor(Math.random() * 255)};
 
+const copy = document.querySelector("#copy").addEventListener("click", (e) => {
+   
+        const useRange = document.createRange();
+        const useSelection = window.getSelection();
+        useRange.selectNodeContents(text);
+        useSelection.removeAllRanges();
+        useSelection.addRange(useRange);
+        document.execCommand("copy");
+        alert(`Copiado`)
+})
 
-
-//Create RGB 
-const changeColor = () => {
-    const red = RGB();
-    const blue = RGB();
-    const green = RGB();
-    const fullColor = `RGB(${red},${green},${blue})`;
-    return fullColor
-}
-
-
-
-
-
-
-    

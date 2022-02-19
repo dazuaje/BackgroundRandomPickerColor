@@ -21,8 +21,8 @@ body {
 
 .content {
   background-color: azure;
-  width: 50vh;
-  height: 23vh;
+  width: 80vh;
+  height: 37vh;
   border: 0;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -31,12 +31,17 @@ body {
   -o-border-radius: 20px;
   padding: 0;
 }
+.center{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
 
 .textRGB {
-  font-weight: bold;
-  font-size: 25px;
   margin-bottom: 65px;
   text-align: center;
+  font-size: 20px;
+  color: #fff;
 }
 
 .btn {
@@ -66,6 +71,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 30px;
 }
 
 h2 {
@@ -73,4 +79,9 @@ h2 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   text-align: center;
+}
+@media (width: 300px){
+  .btnContainer{
+    margin-top: 20px;
+  }
 }
