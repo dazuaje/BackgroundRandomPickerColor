@@ -8,11 +8,11 @@ btn.addEventListener('click', (e) => {
     const blue = Math.floor(Math.random() * 255);
     const green = Math.floor(Math.random() * 255);
 
-    const fullColor =  `RGB( ${red},${green},${blue})`
+    const fullColor =  `RGB(${red},${green},${blue})`
 
     backgroundcolor.style.backgroundColor = fullColor;
     text.textContent = fullColor;
-    text.style.backgroundColor = fullColor
+    text.style.color = fullColor
     
     
 });
